@@ -18,6 +18,7 @@ See sende_sim.py for example of plotted data
 The monitor expects to receive 8 bytes data packets with a line return
 as a packet EOF on the serial port.
 Each received packet is analysed to extract gx, gy and gz.
+test
 
 When the monitor is active, you can turn the 'Update speed' knob
 to control the frequency of screen updates.
