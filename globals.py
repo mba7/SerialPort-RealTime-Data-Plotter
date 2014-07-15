@@ -5,8 +5,8 @@ import  random, sys, Queue, serial, glob, os, csv, time
 EARTH_GRAVITY_MS2   = 9.80665
 SCALE_MULTIPLIER    = 0.0078
 
-YMAX				=	4.000
-YMIN				=	-4.000
+YMAX				=	 4.000
+YMIN				=   -4.000
 
 ktrace = 0
 

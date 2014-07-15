@@ -14,6 +14,7 @@ Last modified: 07.08.2009
 """
 
 import  random, sys, Queue, serial, glob, os, csv, time
+
 import  PyQt4.Qwt5     as Qwt
 from    PyQt4.QtCore   import *
 from    PyQt4.QtGui    import *
@@ -289,6 +290,7 @@ class PlottingDataMonitor(QMainWindow):
             self.set_actions_enable_state()
     #-----------------------------------------------
 
+
     def fill_ports_combobox(self):
         """ Purpose: rescan the serial port com and update the combobox
         """
@@ -349,6 +351,7 @@ class PlottingDataMonitor(QMainWindow):
         debug('--> Monitor running')
     #------------------------------------------------------------
 
+
     def OnStop(self):
         """ Stop the monitor
         """
@@ -365,6 +368,7 @@ class PlottingDataMonitor(QMainWindow):
         debug('--> Monitor idle')
     #-----------------------------------------------
 
+
     def on_timer(self):
         """ Executed periodically when the monitor update timer
             is fired.
@@ -372,6 +376,7 @@ class PlottingDataMonitor(QMainWindow):
         self.read_serial_data()
         self.update_monitor()
 	#-----------------------------------------------
+
 
     def on_knob_change(self):
         """ When the knob is rotated, it sets the update interval
@@ -383,6 +388,8 @@ class PlottingDataMonitor(QMainWindow):
         if self.timer.isActive():
             update_freq = max(0.01, update_freq)
             self.timer.setInterval(1000.0 / update_freq)
+    #-----------------------------------------------
+
 
     def update_monitor(self):
         """ Updates the state of the monitor window with new 
@@ -432,13 +439,11 @@ class PlottingDataMonitor(QMainWindow):
             debug("ydata", data[1])
             debug("tdata", data[2])
             """
-            
 
-            self.plot.setAxisScale(Qwt.QwtPlot.xBottom, tdata[0], max(5, tdata[-1]) )
-            
+            self.plot.setAxisScale(Qwt.QwtPlot.xBottom, tdata[0], max(5, tdata[-1]) )        
             
             self.plot.replot()
-            
+    #-----------------------------------------------
             
             
     def read_serial_data(self):
@@ -455,7 +460,7 @@ class PlottingDataMonitor(QMainWindow):
                         gz=qdata[-1][0][2]
                         )
             self.livefeed.add_data(data)
-
+    #-----------------------------------------------
 
 
     
@@ -468,6 +473,8 @@ class PlottingDataMonitor(QMainWindow):
                 target.addSeparator()
             else:
                 target.addAction(action)
+    #-----------------------------------------------
+
 
     def create_action(  self, text, slot=None, shortcut=None, 
                         icon=None, tip=None, checkable=False, 
@@ -485,7 +492,9 @@ class PlottingDataMonitor(QMainWindow):
         if checkable:
             action.setCheckable(True)
         return action
+    #-----------------------------------------------
 
+    
 
 def main():
     app = QApplication(sys.argv)
