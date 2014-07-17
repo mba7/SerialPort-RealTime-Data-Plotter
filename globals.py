@@ -40,7 +40,7 @@ class LiveDataFeed(object):
     def read_data(self):
         self.has_new_data = False
         return self.cur_data
-
+#-----------------------------------------------
 
 def debug(message1, message2=None, message3=None):
     if ktrace:
