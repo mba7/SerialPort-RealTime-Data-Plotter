@@ -25,18 +25,23 @@ When the monitor is active, you can:
 - activate or deactivate each channel
 - change the length of csv file to save (containing the data + a timestamp)
 
+This application work with an arduino conntected to an ADXL345 through the SPI bus and to the computer serial port through a serial communication. See the arduino code ADXL345_Transmitter for further informations.
 
-The code could be emulated with a simulated data sender script: 
+The code could be emulated with a simulated data sender script (See sender_sim.py), to do that: 
 
-- create a twisted virtual serial port (com1 and com2): using socat on mac : https://github.com/clokey/PublicCode/tree/master/MacOSXVirtualSerialPort and virtuel serial port driver on windows
+- create a twisted virtual serial port (com1 and com2): using socat on mac : https://github.com/clokey/PublicCode/tree/master/MacOSXVirtualSerialPort and virtual serial port driver on windows
 - launch sender_sim.py (com1)
 - launch plotting_data_monitor.pyw (com2)
+- enjoy the show
 
 
 Code inspired from Eli Bendersky work
 http://eli.thegreenplace.net/2009/08/07/a-live-data-monitor-with-python-pyqt-and-pyserial/
 
+See this sparkfun guide for further ADXL345 informations
+https://www.sparkfun.com/tutorials/240
+
 Author:   	mba7
-			monta.bha@gmail.com
-			07-2014
+Email:   	monta.bha@gmail.com
+Date:   	07-2014
 
