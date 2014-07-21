@@ -1,3 +1,21 @@
+#!/usr/bin/python
+# -*- coding: cp1252 -*-
+#############################################################################
+##
+## Spirtech (C) 2014 
+## All rights reserved.
+## File: cerbere_import.py
+## Description: Cerbere2 import tool
+##              export a ready to import sql file from two csv file : device.csv 
+##              and reseau.csv              
+##
+## - clean csv file from quotes
+## - read device.csv file and update the output sql file with the imported data
+## - read reseau.csv file and update the output sql file with the imported data
+##
+##  Author:   mba7
+##  Email:    monta.bha@gmail.com
+#############################################################################
 """ 
 A serial port packet monitor that plots live data using PyQwt.
 

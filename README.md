@@ -6,7 +6,7 @@ Prerequisites: Python - pyqwt - numpy - pyserial - csv
 A serial port real time data monitor that plots live data using PyQwt.
 In this case the plotted data are the acceleration (gx, gy, gz) measured by the ADXL345 accelerometer and send via an arduino through the serial port.
 
-![ADXL345-Monitor](https://www.dropbox.com/s/cuch13f61r8kpm4/ADXL345-Monitor.png "ADXL345-Monitor")
+![ADXL345-Monitor](https://github.com/mba7/SerialPort-RealTime-Data-Plotter/blob/master/ADXL345-Monitor.png "ADXL345-Monitor")
 
 The monitor expects to receive 6 bytes data packets with a line return
 as a packet EOF on the serial port and a space as byte seperator.
@@ -36,6 +36,7 @@ The code could be emulated with a simulated data sender script:
 Code inspired from Eli Bendersky work
 http://eli.thegreenplace.net/2009/08/07/a-live-data-monitor-with-python-pyqt-and-pyserial/
 
+Author:   	mba7
+			monta.bha@gmail.com
+			07-2014
 
-mba7
-monta.bha@gmail.com
